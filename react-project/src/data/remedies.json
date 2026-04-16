@@ -1,0 +1,208 @@
+[
+  {
+    "id": 1,
+    "type": "skin",
+    "problem": "Acne",
+    "skinType": "oily",
+    "ingredients": ["turmeric", "honey"],
+    "steps": "one tablespoon of tumeric powder and add honey to make it as a paste and apply it. Apply for 15 mins",
+    "tips": "Use twice a week"
+  },
+  {
+    "id": 2,
+    "type": "skin",
+    "problem": "Acne",
+    "skinType": "oily",
+    "ingredients": ["Multani", "honey","Rose Water"],
+    "steps": "one tablespoon of multani, add honey and rosewater to make it as paste and Apply for 30 mins.",
+    "tips": "Use twice a week"
+  },
+  {
+    "id": 3,
+    "type": "skin",
+    "problem": "Dark spots",
+    "skinType": "dry",
+    "ingredients": ["aloe vera"],
+    "steps": "Apply daily",
+    "tips": "Be consistent"
+  },
+  {
+    "id": 4,
+    "type": "skin",
+    "problem": "Dark spots",
+    "skinType": "All",
+    "ingredients": ["Honey"],
+    "steps": "After Face wash apply honey for overnight.Apply daily",
+    "tips": "Be consistent"
+  },
+  {
+    "id": 5,
+    "type": "skin",
+    "problem": "Dry skin",
+    "skinType": "Dry",
+    "ingredients": ["Malai"],
+    "steps": "Milk cream(Malai) apply it before bath.",
+    "tips": "Daily"
+  },
+  
+  {
+  "id": 6,
+  "type": "skin",
+  "problem": "Combination Skin Care",
+  "skinType": "combination",
+  "ingredients": [
+    "Multani mitti",
+    "Rose water",
+    "Aloe vera gel"
+  ],
+  "steps": [
+    "Mix multani mitti with rose water",
+    "Apply on oily areas (T-zone)",
+    "Apply aloe vera on dry areas",
+    "Leave for 15 minutes",
+    "Wash with water"
+  ],
+  "tips": [
+    "Treat oily and dry areas separately",
+    "Avoid harsh products",
+    "Use gentle moisturizer",
+    "Do not over wash face"
+  ]
+},
+  
+  {
+    "id": 7,
+    "type": "hair",
+    "problem": "hair fall",
+    "hairType": "straight",
+    "ingredients": ["onion juice"],
+    "steps": "Two tablespoon of onion juice and dilute with water or coconut oil (1 tablespoon).Apply twice a week.",
+    "tips": "Massage scalp"
+  },
+  {
+    "id":8,
+    "type": "hair",
+    "problem": "dry",
+    "hairType": "curly",
+    "ingredients": ["yogurt","avocado"],
+    "steps": "Add 2 or 3 tablespoon of yogurt and one avocado or mix equal parts of honey & yogurt make it as paste and apply it for 30 minutes.",
+    "tips": "Use mild shampoo, Avoid heat styling"
+  },
+  {
+    "id": 9,
+    "type": "hair",
+    "problem": "Frizzy",
+    "hairType": "curly",
+    "ingredients": ["Banana","Honey","Olive oil"],
+    "steps":"Mash banana, add honey and oil. Apply on hair, wash after 20 minutes.",
+    "tips": "Use mild shampoo, Avoid heat styling, Use silk pillow"
+  },
+  {
+    "id": 10,
+    "type": "hair",
+    "problem": "product built up",
+    "hairType": "wavy",
+    "ingredients": ["Coconut oil","Aloe vera","Warm water"],
+    "steps": "Warm cocunt oil slightly, Apply to scalp and hair and wrap with hot towel. Leave for 20 minutes and wash with mild shampoo.",
+    "tips": "Use light products, Avoid heavy oils, Use heat for better absorption."
+  },
+  {
+    "id": 11,
+    "type": "hair",
+    "problem": "Dull hair",
+    "hairType": "coily",
+    "ingredients": ["Egg","Curd","Lemon juice"],
+    "steps": "Mix egg and curd, add few drops of lemon juice, Apply evenly on hair. Leave for 20 minutes and wash with cool water.",
+    "tips": "Maintain weekly care, Avoid over-washing, use mild shampoo."
+  },
+  {
+  "id": 12,
+  "type": "hair",
+  "problem": "Grey Hair",
+  "hairType": "all",
+  "ingredients": [
+    "Curry leaves",
+    "Coconut oil"
+  ],
+  "steps": [
+    "Take coconut oil and add curry leaves",
+    "Boil until leaves turn black",
+    "Cool the oil",
+    "Apply on scalp",
+    "Massage gently",
+    "Leave for 30 minutes",
+    "Wash with mild shampoo"
+  ],
+  "tips": [
+    "Avoid chemical dyes",
+    "Eat healthy food",
+    "Include amla in diet"
+  ]
+},
+ {
+    "id": 13,
+    "type": "hair",
+    "problem": "Dull hair",
+    "hairType": "All",
+    "ingredients": ["Banana","Honey"],
+    "steps": "Banana + honey mask apply for 30 minutes.",
+    "tips": "Heat styling avoid, Do Deep conditioning"
+  },
+  {
+    "id": 14,
+    "type": "hair",
+    "problem": "Hair Thinning",
+    "hairType": "All",
+    "ingredients": ["Fenugreek seeds"],
+    "steps": "Soak fenugreek over night and grind it as a smooth paste and apply it for 30 minutes or keet it nearly 1hour. ",
+    "tips": "Proper diet (greens, fruits), Enough sleep"
+  },
+  {
+    "id": 15,
+    "type": "hair",
+    "problem": "Lice",
+    "hairType": "All",
+    "ingredients": ["Neem leaves","Coconut oil"],
+    "steps": "Boil neem leaves in water and let it cool. Grind into paste and mix with coconut oil. Apply on scalp and hair. Leave for 30 minutes, then wash with mild shampoo. Use lice comb after wash.",
+    "tips": "Repeat twice a week. Keep hair clean and avoid sharing combs."
+  },
+  {
+    "id": 16,
+    "type": "skin",
+    "problem": "tan",
+    "hairType": "all skin type",
+    "ingredients": ["Curd","Lemon juice"],
+    "steps": ["Mix 2 tablespoons curd with few drops of lemon juice. Apply evenly on face.",
+              "Leave for 20 minutes and wash with luke warm water."],
+    "tips": "Use 2 times a week. Avoid sun exposure after application."
+  },
+  {
+    "id": 17,
+    "type": "skin",
+    "problem": "Sensitive",
+    "skinType": "sensitive",
+    "ingredients": ["Aloe vera","Cucumber juice"],
+    "steps": "Mix aloe vera gel with cucumber juice and apply gently. Leave for 15 minutes and rinse.",
+    "tips": "Use regularly for calming effect."
+  },
+  {
+    "id": 18,
+    "type": "skin",
+    "problem": "Puffy face",
+    "hairType": "all skin type",
+    "ingredients": ["Ice cubes","Cold water"],
+    "steps":"Fill a bowl with cold water and ice cubes. Submerge your face for 15 seconds, repeat this for 3 times",
+    "tips": "Do in morning for best results. Drink more water and get proper sleep."
+  },
+ {
+    "id": 19,
+    "type": "hair",
+    "problem": "Hair Thickness",
+    "hairType": "all",
+    "ingredients": ["Castor oil", "Coconut oil"],
+    "steps":["Mix equal amounts of castor oil and coconut oil. Warm slightly and apply on scalp.",
+    " Massage gently for 10 minutes. Leave for 1 hour or overnight and wash with mild shampoo."],
+    "tips": "Use twice a week. Helps improve hair thickness and strength."
+  }
+
+] 

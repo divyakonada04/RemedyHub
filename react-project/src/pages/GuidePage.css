@@ -1,0 +1,356 @@
+.guide-page-container {
+  padding: 40px 20px;
+  background: #f5f7f6;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.guide-section {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.guide-section-title {
+  font-size: 2.2rem;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.guide-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.guide-card-premium {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  text-align: left;
+  border: 1px solid #edf2f0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.guide-card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: #e8f5e9;
+  color: #4caf50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.guide-card-premium h3 {
+  color: #1b5e20;
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+}
+
+.guide-card-premium p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.guide-step-list {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.guide-step-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.guide-step-number {
+  background: #e8f5e9;
+  color: #2e7d32;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+/* Quiz Styles */
+.quiz-container {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 40px rgba(76, 175, 80, 0.08);
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.quiz-progress-bar {
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.quiz-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  transition: width 0.4s ease;
+}
+
+.quiz-question {
+  font-size: 1.5rem;
+  color: #2e7d32;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.quiz-options {
+  display: grid;
+  gap: 15px;
+}
+
+.quiz-option-btn {
+  background: #f9fbf9;
+  border: 2px solid #e8f5e9;
+  padding: 18px 25px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.quiz-option-btn:hover {
+  border-color: #4caf50;
+  background: #f1f8e9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
+}
+
+.quiz-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.quiz-tab {
+  padding: 12px 30px;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quiz-tab.active {
+  background: #4caf50;
+  border-color: #4caf50;
+  color: white;
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+}
+
+/* Result Card */
+.result-card {
+  text-align: center;
+  padding: 10px;
+}
+
+.result-icon {
+  width: 80px;
+  height: 80px;
+  background: #e8f5e9;
+  color: #4caf50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.result-title {
+  font-size: 2.2rem;
+  color: #1b5e20;
+  margin-bottom: 15px;
+}
+
+.result-desc {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.action-btn-primary {
+  background: #4caf50;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-btn-primary:hover {
+  background: #43a047;
+  transform: translateY(-2px);
+}
+
+.action-btn-secondary {
+  background: transparent;
+  color: #4caf50;
+  border: 2px solid #4caf50;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn-secondary:hover {
+  background: #f1f8e9;
+}
+
+/* Step Flow Elements */
+.step-flow-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 40px;
+}
+
+.step-flow-line {
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  right: 60px;
+  height: 4px;
+  background: #e0e0e0;
+  z-index: 1;
+}
+
+.step-flow-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #81c784);
+}
+
+.step-node {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+}
+
+.step-circle {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border: 3px solid #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.4s ease;
+  margin-bottom: 15px;
+}
+
+.step-node.active .step-circle {
+  border-color: #4caf50;
+  background: #4caf50;
+  color: white;
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.4);
+}
+
+.step-title {
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.step-desc {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+}
+
+@media(max-width: 768px) {
+  .step-flow-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+  }
+  
+  .step-flow-line {
+    top: 0;
+    bottom: 0;
+    left: 60px;
+    width: 4px;
+    height: 100%;
+  }
+  
+  .step-node {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .step-circle {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+  
+  .step-title, .step-desc {
+    text-align: left;
+  }
+}
