@@ -8,10 +8,11 @@ function Search() {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/remedies/search?q=${query}`)
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/api/remedies/search?q=${query}`)
       .then(res => res.json())
       .then(data => setResults(data));
   }, [query]);
+  
   return (
     <div className="page">
     <h2>Results for: {query}</h2>
@@ -20,12 +21,12 @@ function Search() {
     {results.length === 0 ? (
     <p>No results found</p>
     ) : (
-    results.map((r) => (
-    <div className="card" key={r.id}>
-    <h3>{r.problem}</h3>
-    <p><b>Ingredients:</b> {r.ingredients.join(", ")}</p>
-    <p><b>Steps:</b> {r.steps}</p>
-    <p><b>Tips:</b> {r.tips}</p>
+    results.map((r, idx) => (
+    <div className="card" key={r._id || r.id || idx}>
+    <h3>{r.problem || r.title}</h3>
+    <p><b>Ingredients:</b> {Array.isArray(r.ingredients) ? r.ingredients.join(", ") : r.ingredients}</p>
+    <p><b>Steps:</b> {Array.isArray(r.steps) ? r.steps.join(", ") : r.steps}</p>
+    <p><b>Tips:</b> {Array.isArray(r.tips) ? r.tips.join(", ") : r.tips}</p>
     </div>
     ))
    )}

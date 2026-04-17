@@ -39,140 +39,68 @@ const itemVariants = {
   }
 };
 
-const GuidePage = () => {
-  const [activeQuiz, setActiveQuiz] = useState('skin');
+function GuidePage() {
+  const [activeQuiz, setActiveQuiz] = useState("skin");
 
   return (
     <div className="guide-page-container">
-      
-      {/* 1. SKIN TYPE GUIDE */}
-      <section className="guide-section">
-        <motion.h2 
-          className="guide-section-title"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-        >
-          Skin Type Guide
-        </motion.h2>
-        
-        <motion.div 
-          className="guide-cards-grid"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-        >
-          {skinTypes.map((type) => (
-            <motion.div 
-              key={type.id} 
-              className="guide-card-premium"
-              variants={itemVariants}
-              whileHover={{ y: -10, boxShadow: '0 15px 35px rgba(76, 175, 80, 0.15)' }}
-            >
-              <div className="guide-card-icon">{type.icon}</div>
-              <h3>{type.title}</h3>
-              <p><strong>Description:</strong> {type.desc}</p>
-              <p><strong>Common problems:</strong> {type.problems}</p>
-              
-              <div className="guide-step-list">
-                <p style={{ fontWeight: 'bold', marginBottom: '10px', fontSize: '0.9rem', color: '#2e7d32' }}>Care Routine</p>
-                {type.routine.map((step, idx) => (
-                  <div key={idx} className="guide-step-item">
-                    <span className="guide-step-number">{idx + 1}</span>
-                    <span>{step}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
 
-      {/* 2. HAIR TYPE GUIDE */}
-      <section className="guide-section" style={{ marginTop: '90px' }}>
-        <motion.h2 
-          className="guide-section-title"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-        >
-          Hair Type Guide
-        </motion.h2>
-        
-        <motion.div 
-          className="guide-cards-grid"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-        >
-          {hairTypes.map((type) => (
-            <motion.div 
-              key={type.id} 
-              className="guide-card-premium"
-              variants={itemVariants}
-              whileHover={{ y: -10, boxShadow: '0 15px 35px rgba(76, 175, 80, 0.15)' }}
-            >
-              <div className="guide-card-icon">{type.icon}</div>
-              <h3>{type.title}</h3>
-              <p><strong>Characteristics:</strong> {type.desc}</p>
-              <p><strong>Common issues:</strong> {type.problems}</p>
-              
-              <div className="guide-step-list">
-                <p style={{ fontWeight: 'bold', marginBottom: '10px', fontSize: '0.9rem', color: '#2e7d32' }}>Care Routine</p>
-                {type.routine.map((step, idx) => (
-                  <div key={idx} className="guide-step-item">
-                    <span className="guide-step-number">{idx + 1}</span>
-                    <span>{step}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
+      {/* Skin Guide */}
+      <h2>Skin Type Guide</h2>
+      <div className="guide-cards-grid">
+        {skinTypes.map((type) => (
+          <div key={type.id} className="guide-card">
+            <h3>{type.title}</h3>
+            <p><b>Description:</b> {type.desc}</p>
+            <p><b>Problems:</b> {type.problems}</p>
 
-      {/* QUIZ SECTION (Sections 3 & 4) */}
-      <section className="guide-section" style={{ marginTop: '90px' }}>
-         <motion.h2 
-          className="guide-section-title"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          Find Your Type
-        </motion.h2>
-        
-        <div className="quiz-tabs">
-          <button 
-            className={`quiz-tab ${activeQuiz === 'skin' ? 'active' : ''}`}
-            onClick={() => setActiveQuiz('skin')}
-          >
-            Skin Type Quiz
-          </button>
-          <button 
-            className={`quiz-tab ${activeQuiz === 'hair' ? 'active' : ''}`}
-            onClick={() => setActiveQuiz('hair')}
-          >
-            Hair Type Quiz
-          </button>
-        </div>
-        
-        <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           animate={{ opacity: 1, y: 0 }}
-           key={activeQuiz}
-           transition={{ duration: 0.4 }}
-        >
-          {activeQuiz === 'skin' ? <SkinQuiz /> : <HairQuiz />}
-        </motion.div>
-      </section>
+            <p><b>Routine:</b></p>
+            <ul>
+              {type.routine.map((step, i) => (
+                <li key={i}>{step}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      {/* Hair Guide */}
+      <h2>Hair Type Guide</h2>
+      <div className="guide-cards-grid">
+        {hairTypes.map((type) => (
+          <div key={type.id} className="guide-card">
+            <h3>{type.title}</h3>
+            <p><b>Description:</b> {type.desc}</p>
+            <p><b>Problems:</b> {type.problems}</p>
+
+            <p><b>Routine:</b></p>
+            <ul>
+              {type.routine.map((step, i) => (
+                <li key={i}>{step}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      {/* Quiz Section */}
+      <h2>Find Your Type</h2>
+
+      <div className="quiz-tabs">
+        <button onClick={() => setActiveQuiz("skin")}>
+          Skin Quiz
+        </button>
+        <button onClick={() => setActiveQuiz("hair")}>
+          Hair Quiz
+        </button>
+      </div>
+
+      <div>
+        {activeQuiz === "skin" ? <SkinQuiz /> : <HairQuiz />}
+      </div>
 
     </div>
   );
-};
+}
 
 export default GuidePage;
