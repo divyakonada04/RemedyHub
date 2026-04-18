@@ -14,8 +14,8 @@ function HairRemedies() {
   },[]);
 
   const filtered = data.filter((r) =>
-    ((r.type || r.category)?.toLowerCase() === "hair") &&
-    ((r.problem || r.title)?.toLowerCase().includes(search.toLowerCase())) &&
+    (r.category?.toLowerCase() === "hair") &&
+    ((r.title || r.problem)?.toLowerCase().includes(search.toLowerCase())) &&
     (hairType === "" || r.hairType?.toLowerCase() === hairType.toLowerCase())
   );
 
@@ -40,10 +40,10 @@ function HairRemedies() {
         ) : (
           filtered.map((r, idx) => (
             <div className="card" key={r._id || r.id || idx}>
-              <h3>{r.problem || r.title}</h3>
-              <p><b>Ingredients:</b> {Array.isArray(r.ingredients) ? r.ingredients.join(", ") : r.ingredients}</p>
-              <p><b>Steps:</b> {Array.isArray(r.steps) ? r.steps.join(", ") : r.steps}</p>
-              <p><b>Tips:</b> {Array.isArray(r.tips) ? r.tips.join(", ") : r.tips}</p>
+              <h3>{r.title || r.problem}</h3>
+              <p><b>Ingredients:</b> {Array.isArray(r.ingredients) ? r.ingredients.join(", ") : (r.ingredients || "No ingredients listed")}</p>
+              <p><b>Steps:</b> {Array.isArray(r.steps) ? r.steps.join(", ") : (r.steps || "No steps listed")}</p>
+              <p><b>Tips:</b> {Array.isArray(r.tips) ? r.tips.join(", ") : (r.tips || "No tips available")}</p>
             </div>
           ))
         )}

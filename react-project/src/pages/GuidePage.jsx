@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Droplets, Sun, Wind, CloudRain, Star, Sparkles, Scissors, Activity } from 'lucide-react';
-import './GuidePage.css';
+// import  './GuidePage.css';
 import SkinQuiz from '../components/Guide/SkinQuiz';
 import HairQuiz from '../components/Guide/HairQuiz';
+import { motion } from 'framer-motion';
 
 const skinTypes = [
   { id: 1, title: 'Oily Skin', desc: 'Produces excess oil, leading to shine and potential breakouts.', problems: 'Acne, large pores, shiny T-zone.', routine: ['Double Cleanse', 'BHA Exfoliant', 'Oil-free Moisturizer', 'Gel Sunscreen'], icon: <Droplets size={24} /> },
@@ -40,52 +40,66 @@ const itemVariants = {
 };
 
 function GuidePage() {
+  document.body.classList.add("guide-active");
   const [activeQuiz, setActiveQuiz] = useState("skin");
 
   return (
-    <div className="guide-page-container">
+    <div className={style["guide-page-container"]}>
 
-      {/* Skin Guide */}
-      <h2>Skin Type Guide</h2>
-      <div className="guide-cards-grid">
-        {skinTypes.map((type) => (
-          <div key={type.id} className="guide-card">
-            <h3>{type.title}</h3>
-            <p><b>Description:</b> {type.desc}</p>
-            <p><b>Problems:</b> {type.problems}</p>
+      {/* Skin Section */}
+      <div className={style["guide-section"]}>
 
-            <p><b>Routine:</b></p>
-            <ul>
-              {type.routine.map((step, i) => (
-                <li key={i}>{step}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <h2 className={style["guide-section-title"]}>Skin Type Guide</h2>
+
+        <div className={style["guide-cards-grid"]}>
+
+          {skinTypes.map((type) => (
+            <div key={type.id} className={style["guide-card-premium"]}>
+
+              <h3>{type.title}</h3>
+              <p><b>Description:</b> {type.desc}</p>
+              <p><b>Problems:</b> {type.problems}</p>
+
+              <p><b>Routine:</b></p>
+              <div className={style["guide-step-list"]}>
+                {type.routine.map((step, i) => (
+                  <div key={i} className={style["guide-step-item"]}>
+                    <span className={style["guide-step-number"]}>{i + 1}</span>
+                    {step}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Hair Guide */}
-      <h2>Hair Type Guide</h2>
-      <div className="guide-cards-grid">
-        {hairTypes.map((type) => (
-          <div key={type.id} className="guide-card">
-            <h3>{type.title}</h3>
-            <p><b>Description:</b> {type.desc}</p>
-            <p><b>Problems:</b> {type.problems}</p>
+      {/* Hair Section */}
+      <div className={style["guide-section"]}>
+        <h2 className={style["guide-section-title"]}>Hair Type Guide</h2>
 
-            <p><b>Routine:</b></p>
-            <ul>
-              {type.routine.map((step, i) => (
-                <li key={i}>{step}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <div className={style["guide-cards-grid"]}>
+          {hairTypes.map((type) => (
+            <div key={type.id} className={style["guide-card-premium"]}>
+              <h3>{type.title}</h3>
+              <p><b>Description:</b> {type.desc}</p>
+              <p><b>Problems:</b> {type.problems}</p>
+
+              <p><b>Routine:</b></p>
+              <div className={style["guide-step-list"]}>
+                {type.routine.map((step, i) => (
+                  <div key={i} className={style["guide-step-item"]}>
+                    <span className={style["guide-step-number"]}>{i + 1}</span>
+                    {step}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
-
-
-      {/* Quiz Section */}
+      {/* Quiz */}
       <h2>Find Your Type</h2>
 
       <div className="quiz-tabs">
@@ -104,9 +118,7 @@ function GuidePage() {
         </button>
       </div>
 
-      <div>
-        {activeQuiz === "skin" ? <SkinQuiz /> : <HairQuiz />}
-      </div>
+      {activeQuiz === "skin" ? <SkinQuiz /> : <HairQuiz />}
 
     </div>
   );

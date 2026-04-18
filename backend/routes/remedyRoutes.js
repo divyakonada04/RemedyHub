@@ -19,8 +19,14 @@ const router = express.Router();
 // ✅ GET all remedies
 router.get("/", async (req, res) => {
   try {
-    const data = await Remedy.find();
-    res.json(data);
+    const data = await Remedy.find().lean();
+    // Map fields for frontend compatibility
+    const formattedData = data.map(item => ({
+      ...item,
+      category: item.category || item.type,
+      title: item.title || item.problem
+    }));
+    res.json(formattedData);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -33,9 +39,16 @@ router.get("/search", async (req, res) => {
 
     const results = await Remedy.find({
       problem: { $regex: query, $options: "i" }
-    });
+    }).lean();
 
-    res.json(results);
+    // Map fields for frontend compatibility
+    const formattedResults = results.map(item => ({
+      ...item,
+      category: item.category || item.type,
+      title: item.title || item.problem
+    }));
+
+    res.json(formattedResults);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
