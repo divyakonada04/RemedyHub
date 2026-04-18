@@ -1,4 +1,4 @@
-.guide-active .guide-page-container {
+:global(.guide-active) .guide-page-container {
   padding: 40px 20px;
   background: #f5f7f6;
   min-height: 100vh;
@@ -6,13 +6,13 @@
   overflow-x: hidden;
 }
 
-.guide-active .guide-section {
+:global(.guide-active) .guide-section {
   max-width: 1100px;
   margin: 0 auto 60px;
   text-align: center;
 }
 
-.guide-active .guide-section-title {
+:global(.guide-active) .guide-section-title {
   font-size: 2.2rem;
   color: #2e7d32;
   margin-bottom: 20px;
@@ -20,14 +20,14 @@
   display: inline-block;
 }
 
-.guide-active .guide-cards-grid {
+:global(.guide-active) .guide-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
   margin-top: 30px;
 }
 
-.guide-active .guide-card-premium {
+:global(.guide-active) .guide-card-premium {
   background: #ffffff;
   border-radius: 16px;
   padding: 25px;
@@ -40,7 +40,7 @@
   height: 100%;
 }
 
-.guide-active .guide-card-icon {
+:global(.guide-active) .guide-card-icon {
   width: 50px;
   height: 50px;
   border-radius: 12px;
@@ -52,26 +52,26 @@
   margin-bottom: 15px;
 }
 
-.guide-active .guide-card-premium h3 {
+:global(.guide-active) .guide-card-premium h3 {
   color: #1b5e20;
   margin: 0 0 10px 0;
   font-size: 1.4rem;
 }
 
-.guide-active .guide-card-premium p {
+:global(.guide-active) .guide-card-premium p {
   color: #666;
   font-size: 0.95rem;
   line-height: 1.6;
   flex-grow: 1;
 }
 
-.guide-active .guide-step-list {
+:global(.guide-active) .guide-step-list {
   margin-top: 15px;
   padding-top: 15px;
   border-top: 1px solid #eee;
 }
 
-.guide-active .guide-step-item {
+:global(.guide-active) .guide-step-item {
   display: flex;
   align-items: center;
   margin-bottom: 8px;
@@ -79,7 +79,7 @@
   color: #444;
 }
 
-.guide-active .guide-step-number {
+:global(.guide-active) .guide-step-number {
   background: #e8f5e9;
   color: #2e7d32;
   width: 24px;
@@ -95,7 +95,7 @@
 }
 
 /* Quiz Styles */
-.quiz-container {
+:global(.quiz-container) {
   background: #ffffff;
   border-radius: 20px;
   padding: 40px;
@@ -106,7 +106,7 @@
   overflow: hidden;
 }
 
-.quiz-progress-bar {
+:global(.quiz-progress-bar) {
   height: 6px;
   background: #e0e0e0;
   border-radius: 3px;
@@ -114,25 +114,25 @@
   overflow: hidden;
 }
 
-.quiz-progress-fill {
+:global(.quiz-progress-fill) {
   height: 100%;
   background: linear-gradient(90deg, #4caf50, #81c784);
   transition: width 0.4s ease;
 }
 
-.quiz-question {
+:global(.quiz-question) {
   font-size: 1.5rem;
   color: #2e7d32;
   margin-bottom: 30px;
   font-weight: bold;
 }
 
-.quiz-options {
+:global(.quiz-options) {
   display: grid;
   gap: 15px;
 }
 
-.quiz-option-btn {
+:global(.quiz-option-btn) {
   background: #f9fbf9;
   border: 2px solid #e8f5e9;
   padding: 18px 25px;
@@ -148,14 +148,14 @@
   width: 100%;
 }
 
-.quiz-option-btn:hover {
+:global(.quiz-option-btn:hover) {
   border-color: #4caf50;
   background: #f1f8e9;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
 }
 
-.quiz-tabs {
+:global(.quiz-tabs) {
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -163,7 +163,7 @@
   flex-wrap: wrap;
 }
 
-.quiz-tab {
+:global(.quiz-tab) {
   padding: 12px 30px;
   background: #fff;
   border: 2px solid #e0e0e0;
@@ -175,7 +175,7 @@
   transition: all 0.3s ease;
 }
 
-.quiz-tab.active {
+:global(.quiz-tab.active) {
   background: #4caf50;
   border-color: #4caf50;
   color: white;
@@ -183,12 +183,12 @@
 }
 
 /* Result Card */
-.result-card {
+:global(.result-card) {
   text-align: center;
   padding: 10px;
 }
 
-.result-icon {
+:global(.result-icon) {
   width: 80px;
   height: 80px;
   background: #e8f5e9;
@@ -200,27 +200,27 @@
   margin: 0 auto 20px;
 }
 
-.result-title {
+:global(.result-title) {
   font-size: 2.2rem;
   color: #1b5e20;
   margin-bottom: 15px;
 }
 
-.result-desc {
+:global(.result-desc) {
   color: #555;
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 30px;
 }
 
-.action-buttons {
+:global(.action-buttons) {
   display: flex;
   gap: 15px;
   justify-content: center;
   margin-top: 30px;
 }
 
-.action-btn-primary {
+:global(.action-btn-primary) {
   background: #4caf50;
   color: white;
   padding: 12px 25px;
@@ -235,12 +235,12 @@
   gap: 8px;
 }
 
-.action-btn-primary:hover {
+:global(.action-btn-primary:hover) {
   background: #43a047;
   transform: translateY(-2px);
 }
 
-.action-btn-secondary {
+:global(.action-btn-secondary) {
   background: transparent;
   color: #4caf50;
   border: 2px solid #4caf50;
@@ -252,19 +252,19 @@
   transition: all 0.2s;
 }
 
-.action-btn-secondary:hover {
+:global(.action-btn-secondary:hover) {
   background: #f1f8e9;
 }
 
 /* Step Flow Elements */
-.step-flow-container {
+:global(.step-flow-container) {
   display: flex;
   justify-content: space-between;
   position: relative;
   margin-top: 40px;
 }
 
-.step-flow-line {
+:global(.step-flow-line) {
   position: absolute;
   top: 30px;
   left: 60px;
@@ -274,12 +274,12 @@
   z-index: 1;
 }
 
-.step-flow-progress {
+:global(.step-flow-progress) {
   height: 100%;
   background: linear-gradient(90deg, #4caf50, #81c784);
 }
 
-.step-node {
+:global(.step-node) {
   position: relative;
   z-index: 2;
   display: flex;
@@ -288,7 +288,7 @@
   width: 120px;
 }
 
-.step-circle {
+:global(.step-circle) {
   width: 60px;
   height: 60px;
   background: white;
@@ -304,21 +304,21 @@
   margin-bottom: 15px;
 }
 
-.step-node.active .step-circle {
+:global(.step-node.active) .step-circle {
   border-color: #4caf50;
   background: #4caf50;
   color: white;
   box-shadow: 0 0 15px rgba(76, 175, 80, 0.4);
 }
 
-.step-title {
+:global(.step-title) {
   font-weight: bold;
   color: #333;
   text-align: center;
   margin-bottom: 5px;
 }
 
-.step-desc {
+:global(.step-desc) {
   font-size: 0.85rem;
   color: #666;
   text-align: center;

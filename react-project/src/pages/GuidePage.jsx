@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Droplets, Sun, Wind, CloudRain, Star, Sparkles, Scissors, Activity } from 'lucide-react';
-// import  './GuidePage.css';
+import style from './GuidePage.module.css';
 import SkinQuiz from '../components/Guide/SkinQuiz';
 import HairQuiz from '../components/Guide/HairQuiz';
 import { motion } from 'framer-motion';
