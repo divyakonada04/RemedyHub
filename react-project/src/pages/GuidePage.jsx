@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Droplets, Sun, Wind, CloudRain, Star, Sparkles, Scissors, Activity } from 'lucide-react';
+import './GuidePage.css';
 import SkinQuiz from '../components/Guide/SkinQuiz';
 import HairQuiz from '../components/Guide/HairQuiz';
-import './GuidePage.css';
 
 const skinTypes = [
   { id: 1, title: 'Oily Skin', desc: 'Produces excess oil, leading to shine and potential breakouts.', problems: 'Acne, large pores, shiny T-zone.', routine: ['Double Cleanse', 'BHA Exfoliant', 'Oil-free Moisturizer', 'Gel Sunscreen'], icon: <Droplets size={24} /> },
@@ -83,14 +83,23 @@ function GuidePage() {
         ))}
       </div>
 
+
+
       {/* Quiz Section */}
       <h2>Find Your Type</h2>
 
       <div className="quiz-tabs">
-        <button onClick={() => setActiveQuiz("skin")}>
+        <button
+          className={`quiz-tab ${activeQuiz === "skin" ? "active" : ""}`}
+          onClick={() => setActiveQuiz("skin")}
+        >
           Skin Quiz
         </button>
-        <button onClick={() => setActiveQuiz("hair")}>
+
+        <button
+          className={`quiz-tab ${activeQuiz === "hair" ? "active" : ""}`}
+          onClick={() => setActiveQuiz("hair")}
+        >
           Hair Quiz
         </button>
       </div>

@@ -11,7 +11,7 @@ function Home() {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
-                height: '100vh'
+                height: '60vh'
             }}
             >
                 <h1>Welcome to RemedyHub🌿</h1>
